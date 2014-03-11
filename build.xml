@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="Sencha examples test">
+
+    <taskdef resource="net/sf/antcontrib/antlib.xml"/>
+    
+    <property name="ext.example.list" value="desktop,kitchensink"/>
+    <property name="ext.pkg" value="${basedir}/pkgs/ext.pkg"/>
+    <property name="ext.dir" value="${basedir}/ext"/>
+    <property name="ext.example.dir" value="${ext.dir}/build/examples"/>
+
+    <property name="touch.example.list" value=""/>
+    <property name="touch.pkg" value="${basedir}/pkgs/touch.pkg"/>
+    <property name="touch.dir" value="${basedir}/touch"/>
+    <property name="touch.example.dir" value="${touch.dir}/build/examples"/>
+    
+    <macrodef name="unzip-pkg">
+        <attribute name="pkgFile"/>
+        <attribute name="pkgDir"/>
+        <sequential>
+            <delete file="@{pkgDir}"/>
+            <mkdir dir="@{pkgDir}"/>
+            <unzip src="@{pkgFile}" dest="@{pkgDir}"/>
+        </sequential>
+    </macrodef>
+    
+    <macrodef name="instrument-examples">
+        <attribute name="exampleDir"/>
+        <attribute name="exampleList"/>
+        <sequential>
+            <for list="@{exampleList}" param="example">
+                <sequential>
+                    <echo>Instrumenting example @{example}</echo>
+                    <replace file="@{exampleDir}/@{example}/index.html">
+                        <replacetoken><![CDATA[<script type="text/javascript">]]></replacetoken>
+                        <replacevalue><![CDATA[
+                            <script type="text/javascript">
+                            window.__webdriver_javascript_errors = [];
+                            window.onerror = function(errorMsg, url, lineNumber) {
+                                window.__webdriver_javascript_errors.push(
+                                    errorMsg +' (found at ' + url + ', line ' + lineNumber + ')');
+                            };
+                        ]]></replacevalue>
+                    </replace>
+                </sequential>
+            </for>
+        </sequential>
+    </macrodef>
+    
+    <target name="prepare-examples">
+        <unzip-pkg pkgFile="${ext.pkg}" pkgDir="${ext.dir}"/>
+        <instrument-examples exampleDir="${ext.example.dir}" exampleList="${ext.example.list}"/>
+    </target>
+    
+</project>
