@@ -51,4 +51,10 @@
         <instrument-examples exampleDir="${ext.example.dir}" exampleList="${ext.example.list}"/>
     </target>
     
+    <target name="wait-for-web-server">
+        <waitfor maxwait="1" maxwaitunit="minute">
+            <socket server="localhost" port="1841"/>
+        </waitfor>
+    </target>
+    
 </project>
