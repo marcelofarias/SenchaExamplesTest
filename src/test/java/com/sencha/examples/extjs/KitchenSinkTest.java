@@ -3,12 +3,13 @@
  */
 package com.sencha.examples.extjs;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import java.util.List;
+
+import static org.fest.assertions.Assertions.assertThat;
 
 @RunWith(Parameterized.class)
 public class KitchenSinkTest extends BaseExampleTest {
@@ -25,7 +26,7 @@ public class KitchenSinkTest extends BaseExampleTest {
     @Test
     public void exampleLoadsWithoutErrors() {
         List<String> errors = getJavaScriptErrors();
-        Assert.assertTrue(errors.isEmpty());
+        assertThat(errors).isEmpty();
     }
 
 }
