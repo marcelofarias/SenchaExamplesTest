@@ -23,7 +23,8 @@ public abstract class BaseExampleTest {
     public static List data() {
         return Arrays.asList(new Object[][]{
                 {"chrome"},
-                {"firefox"}
+                {"firefox"},
+                {"ie"}
         });
     }
     
@@ -41,6 +42,10 @@ public abstract class BaseExampleTest {
             return new RemoteWebDriver(
                     getWebDriverHubURL(),
                     DesiredCapabilities.firefox());
+        } else if ("ie".equals(browserName)){
+            return new RemoteWebDriver(
+                    getWebDriverHubURL(),
+                    DesiredCapabilities.internetExplorer());
         }
         throw new RuntimeException(String.format("Unsupported browser %s", browserName));
     }
