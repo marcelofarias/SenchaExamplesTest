@@ -19,7 +19,7 @@ public abstract class BaseExampleTest {
         _browser = browser;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name="{0}")
     public static List data() {
         return Arrays.asList(new Object[][]{
                 {"chrome"},
@@ -60,9 +60,9 @@ public abstract class BaseExampleTest {
         String callbackAddress = System.getProperty("callback.address");
         _webDriver = getWebDriver(_browser);
         _webDriver.get(String.format(
-                    "http://%s:1841/ext/build/examples%s",
-                    callbackAddress,
-                    getExamplePath()));
+                "http://%s:1841/ext/build/examples%s",
+                callbackAddress,
+                getExamplePath()));
     }
 
     @After
