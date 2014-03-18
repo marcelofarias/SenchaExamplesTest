@@ -37,8 +37,12 @@ public abstract class BaseExampleTest {
             return new RemoteWebDriver(
                     getWebDriverHubURL(),
                     DesiredCapabilities.chrome());
+        } else if ("firefox".equals(browserName)) {
+            return new RemoteWebDriver(
+                    getWebDriverHubURL(),
+                    DesiredCapabilities.firefox());
         }
-        throw new RuntimeException(String.format("Unsupported browser", browserName));
+        throw new RuntimeException(String.format("Unsupported browser %s", browserName));
     }
 
     protected List<String> getJavaScriptErrors() {
