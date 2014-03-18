@@ -22,7 +22,8 @@ public abstract class BaseExampleTest {
     @Parameterized.Parameters
     public static List data() {
         return Arrays.asList(new Object[][]{
-                {"chrome"}
+                {"chrome"},
+                {"firefox"}
         });
     }
     
