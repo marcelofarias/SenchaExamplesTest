@@ -57,4 +57,10 @@
         </waitfor>
     </target>
     
+    <target name="prepare-screenshots-dir">
+        <property name="screenshots.dir" value="${basedir}/screenshots"/>
+        <delete dir="${screenshots.dir}"/>
+        <mkdir dir="${screenshots.dir}"/>
+    </target>
+    
 </project>

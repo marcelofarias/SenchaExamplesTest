@@ -28,5 +28,10 @@ public class KitchenSinkTest extends BaseExampleTest {
         List<String> errors = getJavaScriptErrors();
         assertThat(errors).isEmpty();
     }
+    
+    @Test
+    public void screenshot() throws Exception {
+        saveScreenshot("KitchenSink");
+    }
 
 }

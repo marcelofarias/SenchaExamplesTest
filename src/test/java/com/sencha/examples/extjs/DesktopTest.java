@@ -29,4 +29,9 @@ public class DesktopTest extends BaseExampleTest {
         assertThat(errors).isEmpty();
     }
 
+    @Test
+    public void screenshot() throws Exception {
+        saveScreenshot("Desktop");
+    }
+
 }
