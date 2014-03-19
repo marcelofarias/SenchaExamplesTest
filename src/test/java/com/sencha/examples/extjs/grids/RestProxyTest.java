@@ -1,8 +1,9 @@
 /*
  * Copyright (c) 2012-2013. Sencha Inc.
  */
-package com.sencha.examples.extjs;
+package com.sencha.examples.extjs.grids;
 
+import com.sencha.examples.extjs.BaseExampleTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -12,27 +13,22 @@ import java.util.List;
 import static org.fest.assertions.Assertions.assertThat;
 
 @RunWith(Parameterized.class)
-public class DesktopTest extends BaseExampleTest {
+public class RestProxyTest extends BaseExampleTest {
 
-    public DesktopTest(String browser) {
+    public RestProxyTest(String browser) {
         super(browser);
     }
     
     @Override
     protected String getExamplePath() {
-        return "/desktop";
+        return "/restful/restful.html";
     }
     
     @Test
-    public void exampleLoadsWithoutErrors() {
+    public void exampleLoadsWithoutErrors() throws Exception {
         List<String> errors = getJavaScriptErrors();
         assertThat(errors).isEmpty();
-    }
-
-    @Test
-    public void screenshot() throws Exception {
-        Thread.sleep(10000);
-        saveScreenshot("Desktop");
+        saveScreenshot("grids.RestProxy");
     }
 
 }

@@ -117,6 +117,8 @@ public abstract class BaseExampleTest {
         }
         
         assertThat(extIsReady).isTrue();
+
+        Thread.sleep(5000);
     }
 
     @After
