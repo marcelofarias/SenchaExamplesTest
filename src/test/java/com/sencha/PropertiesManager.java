@@ -27,7 +27,7 @@ public class PropertiesManager {
                 InputStream in = getClass().getResourceAsStream("/local.properties");
                 _properties.load(in);
                 in.close();
-            } catch (IOException e) { 
+            } catch (Exception e) { 
                 // ignore
             }
         }
