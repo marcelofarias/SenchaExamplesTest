@@ -31,6 +31,7 @@ public class DesktopTest extends BaseExampleTest {
 
     @Test
     public void screenshot() throws Exception {
+        Thread.sleep(10000);
         saveScreenshot("Desktop");
     }
 
