@@ -2,8 +2,43 @@
 <project name="Sencha examples test">
 
     <taskdef resource="net/sf/antcontrib/antlib.xml"/>
-    
-    <property name="ext.example.list" value="desktop,kitchensink"/>
+
+    <resources id="ext.example.resources">
+        <string>calendar/index.html</string>
+        <string>charts-kitchensink/#basic-column</string>
+        <string>desktop/index.html</string>
+        <string>feed-viewer/feed-viewer.html</string>
+        <string>grid/binding.html</string>
+        <string>grid/binding-with-classes.html</string>
+        <string>grid/buffer-grid.html</string>
+        <string>grid/transform-dom.html</string>
+        <string>grid/grid-plugins.html</string>
+        <string>grid/group-summary-grid.html</string>
+        <string>grid/infinite-scroll.html</string>
+        <string>grid/infinite-scroll-with-filter.html</string>
+        <string>grid/live-search-grid.html</string>
+        <string>grid/locking-group-summary-grid.html</string>
+        <string>grid/locking-grp-summary-grp-hdrs-grid.html</string>
+        <string>grid/multiple-sorting.html</string>
+        <string>grid/paging.html</string>
+        <string>grid/remote-group-summary-grid.html</string>
+        <string>grid/row-editing.html</string>
+        <string>grid/xml-grid.html</string>
+        <string>grid-filtering/grid-filter-local.html</string>
+        <string>key-feed-viewer/feed-viewer.html</string>
+        <string>kitchensink/index.html</string>
+        <string>organizer/organizer.html</string>
+        <string>portal/index.html</string>
+        <string>restful/restful.html</string>
+        <string>rtl/rtl.html</string>
+        <string>simple-tasks/index.html</string>
+        <string>themes/index.html</string>
+        <string>themes/index.html</string>
+        <string>writer/writer.html</string>
+        <string>writer/writer-jsonp.html</string>
+        
+    </resources>
+    <pathconvert property="ext.example.list" refid="ext.example.resources" pathsep="," />
     <property name="ext.pkg" value="${basedir}/pkgs/ext.pkg"/>
     <property name="ext.dir" value="${basedir}/ext"/>
     <property name="ext.example.dir" value="${ext.dir}/build/examples"/>
@@ -30,7 +65,7 @@
             <for list="@{exampleList}" param="example">
                 <sequential>
                     <echo>Instrumenting example @{example}</echo>
-                    <replace file="@{exampleDir}/@{example}/index.html">
+                    <replace file="@{exampleDir}/@{example}">
                         <replacetoken><![CDATA[<script type="text/javascript">]]></replacetoken>
                         <replacevalue><![CDATA[
                             <script type="text/javascript">
