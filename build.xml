@@ -5,7 +5,7 @@
 
     <resources id="ext.example.resources">
         <string>calendar/index.html</string>
-        <string>charts-kitchensink/#basic-column</string>
+        <string>charts-kitchensink/index.html</string>
         <string>desktop/index.html</string>
         <string>feed-viewer/feed-viewer.html</string>
         <string>grid/binding.html</string>
