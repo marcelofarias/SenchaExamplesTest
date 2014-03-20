@@ -50,9 +50,11 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
     public static LinkedList browsersStrings() {
         LinkedList browsers = new LinkedList();
         browsers.add(new String[]{"Windows 7", "chrome", "33", "neptune"});
+        browsers.add(new String[]{"Windows 7", "firefox", "27", "neptune"});
         browsers.add(new String[]{"Windows 7", "internet explorer", "10", "neptune"});
         browsers.add(new String[]{"Windows 7", "internet explorer", "11", "neptune"});
-        browsers.add(new String[]{"Windows 7", "firefox", "27", "neptune"});
+        browsers.add(new String[]{"Windows 7", "internet explorer", "9", "neptune"});
+        browsers.add(new String[]{"Windows 7", "internet explorer", "8", "neptune"});
 //        browsers.add(new String[]{"mac", "iPad", "7", "neptune"});
         return browsers;
     }
