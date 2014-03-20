@@ -90,7 +90,7 @@
     
     <target name="wait-for-web-server">
         <waitfor maxwait="1" maxwaitunit="minute">
-            <socket server="localhost" port="1841"/>
+            <socket server="localhost" port="8080"/>
         </waitfor>
     </target>
     
