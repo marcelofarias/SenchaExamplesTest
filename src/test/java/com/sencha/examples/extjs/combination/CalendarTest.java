@@ -3,27 +3,29 @@
  */
 package com.sencha.examples.extjs.combination;
 
+import com.saucelabs.junit.ConcurrentParameterized;
+import com.saucelabs.junit.SauceOnDemandTestWatcher;
 import com.sencha.examples.extjs.BaseExampleTest;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
 import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-@RunWith(Parameterized.class)
+@RunWith(ConcurrentParameterized.class)
 public class CalendarTest extends BaseExampleTest {
 
-    public CalendarTest(String browser) {
-        super(browser);
+    public CalendarTest(String platform, String browser, String version, String theme) {
+        super(platform, browser, version, theme);
     }
-    
+
     @Override
     protected String getExamplePath() {
         return "/calendar/index.html";
     }
-    
+
     @Test
     public void exampleLoadsWithoutErrors() throws Exception {
         List<String> errors = getJavaScriptErrors();

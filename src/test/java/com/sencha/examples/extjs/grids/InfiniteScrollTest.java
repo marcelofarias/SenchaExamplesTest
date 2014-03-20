@@ -3,6 +3,7 @@
  */
 package com.sencha.examples.extjs.grids;
 
+import com.saucelabs.junit.ConcurrentParameterized;
 import com.sencha.examples.extjs.BaseExampleTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,11 +13,11 @@ import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-@RunWith(Parameterized.class)
+@RunWith(ConcurrentParameterized.class)
 public class InfiniteScrollTest extends BaseExampleTest {
 
-    public InfiniteScrollTest(String browser) {
-        super(browser);
+    public InfiniteScrollTest(String platform, String browser, String version, String theme) {
+        super(platform, browser, version, theme);
     }
     
     @Override
@@ -28,7 +29,7 @@ public class InfiniteScrollTest extends BaseExampleTest {
     public void exampleLoadsWithoutErrors() throws Exception {
         List<String> errors = getJavaScriptErrors();
         assertThat(errors).isEmpty();
-        saveScreenshot("grids.InfiniteScroll");
+//        saveScreenshot("grids.InfiniteScroll");
     }
 
 }

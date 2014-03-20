@@ -3,8 +3,10 @@
  */
 package com.sencha.examples.extjs.combination;
 
-import com.saucelabs.junit.Parallelized;
+import com.saucelabs.junit.ConcurrentParameterized;
+import com.saucelabs.junit.SauceOnDemandTestWatcher;
 import com.sencha.examples.extjs.BaseExampleTest;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -12,11 +14,11 @@ import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-@RunWith(Parallelized.class)
+@RunWith(ConcurrentParameterized.class)
 public class KitchenSinkTest extends BaseExampleTest {
 
-    public KitchenSinkTest(String browser) {
-        super(browser);
+    public KitchenSinkTest(String platform, String browser, String version, String theme) {
+        super(platform, browser, version, theme);
     }
     
     @Override
@@ -28,7 +30,7 @@ public class KitchenSinkTest extends BaseExampleTest {
     public void exampleLoadsWithoutErrors() throws Exception {
         List<String> errors = getJavaScriptErrors();
         assertThat(errors).isEmpty();
-        saveScreenshot("combination.KitchenSink");
+//        saveScreenshot("combination.KitchenSink");
     }
 
 }
