@@ -12,10 +12,7 @@ import org.apache.commons.io.IOUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -53,7 +50,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
     public static LinkedList browsersStrings() {
         LinkedList browsers = new LinkedList();
         browsers.add(new String[]{"Windows 7", "chrome", "33", "neptune"});
-        browsers.add(new String[]{"mac", "iPad", "7", "neptune"});
+//        browsers.add(new String[]{"mac", "iPad", "7", "neptune"});
         return browsers;
     }
 
@@ -69,10 +66,19 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         }
         
         capabilities.setCapability("name", String.format("%s (%s)", getExamplePath(), _theme));
+
+        for (int i = 0; i < 3; i++) {
+            try {
+                _driver = new RemoteWebDriver(
+                        new URL("http://" + authentication.getUsername() + ":" + authentication.getAccessKey() + "@ondemand.saucelabs.com:80/wd/hub"),
+                        capabilities);
+            } catch (WebDriverException e) {
+                if (i == 2) {
+                    throw e;
+                }
+            }
+        }
         
-        _driver = new RemoteWebDriver(
-                new URL("http://" + authentication.getUsername() + ":" + authentication.getAccessKey() + "@ondemand.saucelabs.com:80/wd/hub"),
-                capabilities);
         _sessionId = (((RemoteWebDriver) _driver).getSessionId()).toString();
         _driver = new Augmenter().augment(_driver);
         
