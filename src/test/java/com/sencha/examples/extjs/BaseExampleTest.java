@@ -53,6 +53,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
     public static LinkedList browsersStrings() {
         LinkedList browsers = new LinkedList();
         browsers.add(new String[]{"Windows 7", "chrome", "33", "neptune"});
+        browsers.add(new String[]{"mac", "iPad", "7", "neptune"});
         return browsers;
     }
 
@@ -62,6 +63,11 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         capabilities.setCapability(CapabilityType.PLATFORM, _platform);
         capabilities.setCapability(CapabilityType.BROWSER_NAME, _browser);
         capabilities.setCapability(CapabilityType.VERSION, _version);
+        
+        if ("iPad".equals(_browser)) {
+            capabilities.setCapability("device-orientation", "portrait");
+        }
+        
         capabilities.setCapability("name", String.format("%s (%s)", getExamplePath(), _theme));
         
         _driver = new RemoteWebDriver(
@@ -69,8 +75,6 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
                 capabilities);
         _sessionId = (((RemoteWebDriver) _driver).getSessionId()).toString();
         _driver = new Augmenter().augment(_driver);
-        
-        _driver.manage().window().maximize();
         
         openExample();
     }
