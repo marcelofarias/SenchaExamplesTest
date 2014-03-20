@@ -72,6 +72,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
                 _driver = new RemoteWebDriver(
                         new URL("http://" + authentication.getUsername() + ":" + authentication.getAccessKey() + "@ondemand.saucelabs.com:80/wd/hub"),
                         capabilities);
+                break;
             } catch (WebDriverException e) {
                 if (i == 2) {
                     throw e;
