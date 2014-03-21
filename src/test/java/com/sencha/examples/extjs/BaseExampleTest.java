@@ -83,7 +83,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
                         new URL("http://" + authentication.getUsername() + ":" + authentication.getAccessKey() + "@ondemand.saucelabs.com:80/wd/hub"),
                         capabilities);
                 break;
-            } catch (WebDriverException e) {
+            } catch (Exception e) {
                 if (i == 2) {
                     throw e;
                 }

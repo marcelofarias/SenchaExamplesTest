@@ -5,6 +5,7 @@ package com.sencha.examples.extjs.direct;
 
 import com.saucelabs.junit.ConcurrentParameterized;
 import com.sencha.examples.extjs.BaseExampleTest;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -25,6 +26,7 @@ public class DirectTest extends BaseExampleTest {
     }
     
     @Test
+    @Ignore("Requires PHP")
     public void exampleLoadsWithoutErrors() throws Exception {
         List<String> errors = getJavaScriptErrors();
         assertThat(errors).isEmpty();
