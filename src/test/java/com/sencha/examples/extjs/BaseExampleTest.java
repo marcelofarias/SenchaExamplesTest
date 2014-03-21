@@ -55,7 +55,8 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         browsers.add(new String[]{"Windows 7", "internet explorer", "11", "neptune"});
         browsers.add(new String[]{"Windows 7", "internet explorer", "9", "neptune"});
         browsers.add(new String[]{"Windows 7", "internet explorer", "8", "neptune"});
-//        browsers.add(new String[]{"mac", "iPad", "7", "neptune"});
+        browsers.add(new String[]{"mac", "iPad", "7", "neptune"});
+        browsers.add(new String[]{"linux", "android", "4.3", "neptune"});
         return browsers;
     }
 
@@ -68,7 +69,11 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         
         if ("iPad".equals(_browser)) {
             capabilities.setCapability("device-orientation", "portrait");
+        } else if ("android".equals(_browser)) {
+            capabilities.setCapability("device-type", "tablet");
+            capabilities.setCapability("device-orientation", "portrait");
         }
+        
         
         capabilities.setCapability("name", String.format("%s (%s)", getExamplePath(), _theme));
 
