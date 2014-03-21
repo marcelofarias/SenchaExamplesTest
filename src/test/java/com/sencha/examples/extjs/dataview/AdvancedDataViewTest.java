@@ -21,7 +21,7 @@ public class AdvancedDataViewTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/chooser/chooser.html";
+        return "/view/chooser/chooser.html";
     }
     
     @Test

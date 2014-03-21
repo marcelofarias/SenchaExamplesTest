@@ -8,7 +8,6 @@
         <string>app/nested-loading/nested-loading.html</string>
         <string>calendar/index.html</string>
         <string>charts-kitchensink/index.html</string>
-        <string>chooser/chooser.html</string>
         <string>core/spotlight.html</string>
         <string>dd/cell-to-cell-dd.html</string>
         <string>dd/dragdropzones.html</string>
@@ -100,6 +99,7 @@
         <string>tree/locking-buffer-rendered-treegrid.html</string>
         <string>tree/locking-treegrid.html</string>
         <string>view/animated-dataview.html</string>
+        <string>view/chooser/chooser.html</string>
         <string>view/data-view.html</string>
         <string>window/gmap.html</string>
         <string>window/layout.html</string>
