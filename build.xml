@@ -4,10 +4,35 @@
     <taskdef resource="net/sf/antcontrib/antlib.xml"/>
 
     <resources id="ext.example.resources">
+        <string>app/feed-viewer/feed-viewer.html</string>
+        <string>app/nested-loading/nested-loading.html</string>
         <string>calendar/index.html</string>
         <string>charts-kitchensink/index.html</string>
+        <string>chooser/chooser.html</string>
+        <string>core/spotlight.html</string>
+        <string>dd/cell-to-cell-dd.html</string>
+        <string>dd/dragdropzones.html</string>
         <string>desktop/index.html</string>
+        <string>direct/direct.html</string>
+        <string>direct/direct-form.html</string>
+        <string>direct/direct-grid.html</string>
+        <string>direct/named-arguments.html</string>
+        <string>direct/direct-tree.html</string>
         <string>feed-viewer/feed-viewer.html</string>
+        <string>form/absform.html</string>
+        <string>form/adv-vtypes.html</string>
+        <string>form/anchoring.html</string>
+        <string>form/check-radio.html</string>
+        <string>form/combos.html</string>
+        <string>form/custom-form.html</string>
+        <string>form/contact-form.html</string>
+        <string>form/dynamic.html</string>
+        <string>form/fieldcontainer.html</string>
+        <string>form/file-upload.html</string>
+        <string>form/forum-search.html</string>
+        <string>form/hbox-form.html</string>
+        <string>form/registration.html</string>
+        <string>form/xml-form.html</string>
         <string>grid/binding.html</string>
         <string>grid/binding-with-classes.html</string>
         <string>grid/buffer-grid.html</string>
@@ -25,16 +50,60 @@
         <string>grid/row-editing.html</string>
         <string>grid/xml-grid.html</string>
         <string>grid-filtering/grid-filter-local.html</string>
+        <string>history/history.html</string>
+        <string>history/history-router.html</string>
         <string>key-feed-viewer/feed-viewer.html</string>
+        <string>keynav/keynav.html</string>
         <string>kitchensink/index.html</string>
+        <string>layout/anchor.html</string>
+        <string>layout/border.html</string>
+        <string>layout/column.html</string>
+        <string>layout/complex.html</string>
+        <string>layout/hbox.html</string>
+        <string>layout/vbox.html</string>
+        <string>layout/table.html</string>
+        <string>layout-browser/layout-browser.html</string>
+        <string>locale/dutch-form.html</string>
+        <string>locale/multi-lang.html</string>
+        <string>menu/actions.html</string>
+        <string>menu/action-grid.html</string>
+        <string>menu/menus.html</string>
+        <string>message-box/msg-box.html</string>
+        <string>multiselect/multiselect-demo.html</string>
         <string>organizer/organizer.html</string>
+        <string>panel/panel.html</string>
+        <string>platform/templates.html</string>
         <string>portal/index.html</string>
+        <string>qtips/qtips.html</string>
+        <string>resizer/basic.html</string>
         <string>restful/restful.html</string>
         <string>rtl/rtl.html</string>
         <string>simple-tasks/index.html</string>
+        <string>simple-widgets/editor.html</string>
+        <string>simple-widgets/progress-bar.html</string>
+        <string>slider/slider.html</string>
+        <string>state/state.html</string>
+        <string>statusbar/statusbar-advanced.html</string>
+        <string>statusbar/statusbar-demo.html</string>
+        <string>tabs/side-tabs.html</string>
+        <string>tabs/tab-scroller-menu.html</string>
+        <string>tabs/tabs.html</string>
+        <string>tabs/tabs-adv.html</string>
         <string>ticket-app/index.html</string>
         <string>themes/index.html</string>
-        <string>themes/index.html</string>
+        <string>toolbar/overflow.html</string>
+        <string>toolbar/reorderable.html</string>
+        <string>toolbar/toolbars.html</string>
+        <string>toolbar/vertical-toolbars.html</string>
+        <string>tree/buffer-rendered-treegrid.html</string>
+        <string>tree/custom-drop-logic.html</string>
+        <string>tree/locking-buffer-rendered-treegrid.html</string>
+        <string>tree/locking-treegrid.html</string>
+        <string>view/animated-dataview.html</string>
+        <string>view/data-view.html</string>
+        <string>window/gmap.html</string>
+        <string>window/layout.html</string>
+        <string>window/window.html</string>
         <string>writer/writer.html</string>
         <string>writer/writer-jsonp.html</string>
         
