@@ -64,6 +64,10 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
     @Before
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
+        
+        capabilities.setCapability("command-timeout", 600);
+        capabilities.setCapability("idle-timeout", 120);
+        
         capabilities.setCapability(CapabilityType.PLATFORM, _platform);
         capabilities.setCapability(CapabilityType.BROWSER_NAME, _browser);
         capabilities.setCapability(CapabilityType.VERSION, _version);
