@@ -10,6 +10,7 @@ import com.saucelabs.junit.SauceOnDemandTestWatcher;
 import com.sencha.PropertiesManager;
 import org.apache.commons.io.IOUtils;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
 import org.openqa.selenium.*;
@@ -106,15 +107,17 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
 
         long startTime = System.currentTimeMillis();
         boolean extIsReady = false;
-        while (!extIsReady && System.currentTimeMillis() < startTime + 30000) {
+        while (!extIsReady && System.currentTimeMillis() < startTime + 60000) {
             Object extReadyState = getJavascriptExecutor().executeScript(
                     "return window.Ext && window.Ext.isReady;");
             if (Boolean.TRUE.equals(extReadyState)) {
                 extIsReady = true;
             }
         }
-
-        assertThat(extIsReady).isTrue();
+        
+        if (!extIsReady) {
+            Assert.fail("ExtJS didn't get ready in 60 seconds");
+        }
     }
 
     @After
