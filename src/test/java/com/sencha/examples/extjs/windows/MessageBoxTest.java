@@ -21,7 +21,7 @@ public class MessageBoxTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/message-box/msg-box.html";
+        return "/kitchensink/#message-box";
     }
     
     @Test

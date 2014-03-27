@@ -21,7 +21,7 @@ public class FieldContainersTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/form/fieldcontainer.html";
+        return "/kitchensink/#form-fieldcontainer";
     }
     
     @Test

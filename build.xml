@@ -26,7 +26,6 @@
         <string>form/custom-form.html</string>
         <string>form/contact-form.html</string>
         <string>form/dynamic.html</string>
-        <string>form/fieldcontainer.html</string>
         <string>form/file-upload.html</string>
         <string>form/forum-search.html</string>
         <string>form/hbox-form.html</string>
@@ -67,7 +66,6 @@
         <string>menu/actions.html</string>
         <string>menu/action-grid.html</string>
         <string>menu/menus.html</string>
-        <string>message-box/msg-box.html</string>
         <string>multiselect/multiselect-demo.html</string>
         <string>organizer/organizer.html</string>
         <string>panel/panel.html</string>
@@ -122,7 +120,7 @@
         <attribute name="pkgFile"/>
         <attribute name="pkgDir"/>
         <sequential>
-            <delete file="@{pkgDir}"/>
+            <delete dir="@{pkgDir}"/>
             <mkdir dir="@{pkgDir}"/>
             <unzip src="@{pkgFile}" dest="@{pkgDir}"/>
         </sequential>
@@ -135,9 +133,11 @@
             <for list="@{exampleList}" param="example">
                 <sequential>
                     <echo>Instrumenting example @{example}</echo>
-                    <replace file="@{exampleDir}/@{example}">
-                        <replacetoken><![CDATA[<script]]></replacetoken>
-                        <replacevalue><![CDATA[
+
+                    <property name="script.pattern"
+                            ><![CDATA[[<]script]]></property>
+                    <property name="loaderrors.script"
+                              ><![CDATA[
                             <script type="text/javascript">
                             window.__webdriver_javascript_errors = [];
                             window.onerror = function(errorMsg, url, lineNumber) {
@@ -145,8 +145,12 @@
                                     errorMsg +' (found at ' + url + ', line ' + lineNumber + ')');
                             };
                             </script>
-                            <script]]></replacevalue>
-                    </replace>
+                            <script]]></property>
+
+                    <replaceregexp file="@{exampleDir}/@{example}" flags="i">
+                        <regexp pattern="${script.pattern}"/>
+                        <substitution expression="${loaderrors.script}"/>
+                    </replaceregexp>
                 </sequential>
             </for>
         </sequential>
