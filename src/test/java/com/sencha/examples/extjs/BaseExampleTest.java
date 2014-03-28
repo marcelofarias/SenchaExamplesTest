@@ -80,7 +80,13 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         }
         
         
-        capabilities.setCapability("name", String.format("%s (%s)", getExamplePath(), _theme));
+        capabilities.setCapability("name",
+                String.format("%s (%s - %s - %s - %s)",
+                        getExamplePath(),
+                        _platform,
+                        _browser,
+                        _version,
+                        _theme));
 
         for (int i = 0; i < 3; i++) {
             try {
