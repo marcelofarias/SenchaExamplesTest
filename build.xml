@@ -162,8 +162,9 @@
     </target>
     
     <target name="wait-for-web-server">
+        <property name="webserver.port" value="8888"/>
         <waitfor maxwait="1" maxwaitunit="minute">
-            <socket server="localhost" port="8080"/>
+            <socket server="localhost" port="${webserver.port}"/>
         </waitfor>
     </target>
     
