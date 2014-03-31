@@ -57,7 +57,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
 //        browsers.add(new String[]{"Windows 7", "internet explorer", "9", "neptune"});
 //        browsers.add(new String[]{"Windows 7", "internet explorer", "8", "neptune"});
         browsers.add(new String[]{"mac", "iPad", "7", "neptune"});
-//        browsers.add(new String[]{"linux", "android", "4.3", "neptune"});
+        browsers.add(new String[]{"linux", "android", "4.3", "neptune"});
         return browsers;
     }
 
@@ -110,7 +110,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
     protected void openExample() {
         String callbackAddress = _propertiesManager.getProperty("callback.address");
         _driver.get(String.format(
-                "http://%s:8080/ext/build/examples%s?theme=%s",
+                "http://%s:8888/ext/build/examples%s?theme=%s",
                 callbackAddress,
                 getExamplePath(),
                 _theme));
