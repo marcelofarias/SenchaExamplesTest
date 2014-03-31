@@ -117,7 +117,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
 
         long startTime = System.currentTimeMillis();
         boolean extIsReady = false;
-        while (!extIsReady && System.currentTimeMillis() < startTime + 60000) {
+        while (!extIsReady && System.currentTimeMillis() < startTime + 120000) {
             Object extReadyState = getJavascriptExecutor().executeScript(
                     "return window.Ext && window.Ext.isReady;");
             if (Boolean.TRUE.equals(extReadyState)) {
@@ -126,7 +126,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         }
         
         if (!extIsReady) {
-            Assert.fail("ExtJS didn't get ready in 60 seconds. JS errors:\n" + getJavaScriptErrors());
+            Assert.fail("ExtJS didn't get ready in 120 seconds. JS errors:\n" + getJavaScriptErrors());
         }
     }
 
