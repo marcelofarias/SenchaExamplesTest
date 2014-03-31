@@ -126,7 +126,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         }
         
         if (!extIsReady) {
-            Assert.fail("ExtJS didn't get ready in 60 seconds");
+            Assert.fail("ExtJS didn't get ready in 60 seconds. JS errors:\n" + getJavaScriptErrors());
         }
     }
 
