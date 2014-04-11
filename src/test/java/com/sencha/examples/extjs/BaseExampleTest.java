@@ -72,8 +72,6 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         capabilities.setCapability("idle-timeout", 120);
         capabilities.setCapability("record-video", false);
         capabilities.setCapability("record-screenshots", false);
-        capabilities.setCapability("record-logs", false);
-        capabilities.setCapability("record-logs", false);
         
         capabilities.setCapability(CapabilityType.PLATFORM, _platform);
         capabilities.setCapability(CapabilityType.BROWSER_NAME, _browser);
