@@ -21,7 +21,7 @@ public class ComboBoxTemplatesTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/form/forum-search.html";
+        return "/kitchensink/#form-forumsearch";
     }
     
     @Test
