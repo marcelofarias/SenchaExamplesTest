@@ -21,7 +21,7 @@ public class CustomFormFieldTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/form/custom-form.html";
+        return "/kitchensink/#form-customfields";
     }
     
     @Test

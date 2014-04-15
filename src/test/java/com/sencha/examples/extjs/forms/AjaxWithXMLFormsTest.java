@@ -21,7 +21,7 @@ public class AjaxWithXMLFormsTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/form/xml-form.html";
+        return "/kitchensink/#form-xml";
     }
     
     @Test

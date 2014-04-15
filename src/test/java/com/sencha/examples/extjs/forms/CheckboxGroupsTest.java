@@ -13,15 +13,15 @@ import java.util.List;
 import static org.fest.assertions.Assertions.assertThat;
 
 @RunWith(ConcurrentParameterized.class)
-public class RegistrationFormTest extends BaseExampleTest {
+public class CheckboxGroupsTest extends BaseExampleTest {
 
-    public RegistrationFormTest(String platform, String browser, String version, String theme) {
+    public CheckboxGroupsTest(String platform, String browser, String version, String theme) {
         super(platform, browser, version, theme);
     }
     
     @Override
     protected String getExamplePath() {
-        return "/kitchensink/#form-register";
+        return "/kitchensink/#form-checkboxgroup";
     }
     
     @Test

@@ -21,7 +21,7 @@ public class FileUploadFieldTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/form/file-upload.html";
+        return "/kitchensink/#form-fileuploads";
     }
     
     @Test

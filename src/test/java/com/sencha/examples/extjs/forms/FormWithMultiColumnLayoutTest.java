@@ -13,15 +13,15 @@ import java.util.List;
 import static org.fest.assertions.Assertions.assertThat;
 
 @RunWith(ConcurrentParameterized.class)
-public class FormWithAbsoluteLayoutTest extends BaseExampleTest {
+public class FormWithMultiColumnLayoutTest extends BaseExampleTest {
 
-    public FormWithAbsoluteLayoutTest(String platform, String browser, String version, String theme) {
+    public FormWithMultiColumnLayoutTest(String platform, String browser, String version, String theme) {
         super(platform, browser, version, theme);
     }
     
     @Override
     protected String getExamplePath() {
-        return "/form/absform.html";
+        return "/kitchensink/#form-multicolumn";
     }
     
     @Test

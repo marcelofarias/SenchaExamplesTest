@@ -13,15 +13,15 @@ import java.util.List;
 import static org.fest.assertions.Assertions.assertThat;
 
 @RunWith(ConcurrentParameterized.class)
-public class CheckboxRadioGroupsTest extends BaseExampleTest {
+public class RadioGroupsTest extends BaseExampleTest {
 
-    public CheckboxRadioGroupsTest(String platform, String browser, String version, String theme) {
+    public RadioGroupsTest(String platform, String browser, String version, String theme) {
         super(platform, browser, version, theme);
     }
     
     @Override
     protected String getExamplePath() {
-        return "/form/check-radio.html";
+        return "/kitchensink/#form-radiogroup";
     }
     
     @Test

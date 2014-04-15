@@ -21,7 +21,7 @@ public class FormsWithHBoxLayoutTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/form/hbox-form.html";
+        return "/kitchensink/#form-hboxlayout";
     }
     
     @Test

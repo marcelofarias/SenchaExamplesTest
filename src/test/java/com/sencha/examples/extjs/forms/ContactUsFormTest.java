@@ -21,7 +21,7 @@ public class ContactUsFormTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/form/contact-form.html";
+        return "/kitchensink/#form-contact";
     }
     
     @Test

@@ -21,7 +21,7 @@ public class AdvancedValidationTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/form/adv-vtypes.html";
+        return "/kitchensink/#form-customerrors";
     }
     
     @Test

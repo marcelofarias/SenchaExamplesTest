@@ -18,19 +18,9 @@
         <string>direct/named-arguments.html</string>
         <string>direct/direct-tree.html</string>
         <string>feed-viewer/feed-viewer.html</string>
-        <string>form/absform.html</string>
-        <string>form/adv-vtypes.html</string>
         <string>form/anchoring.html</string>
-        <string>form/check-radio.html</string>
         <string>form/combos.html</string>
-        <string>form/custom-form.html</string>
-        <string>form/contact-form.html</string>
         <string>form/dynamic.html</string>
-        <string>form/file-upload.html</string>
-        <string>form/forum-search.html</string>
-        <string>form/hbox-form.html</string>
-        <string>form/registration.html</string>
-        <string>form/xml-form.html</string>
         <string>grid/binding.html</string>
         <string>grid/binding-with-classes.html</string>
         <string>grid/buffer-grid.html</string>
