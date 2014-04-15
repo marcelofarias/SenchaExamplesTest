@@ -21,7 +21,7 @@ public class BasicComboBoxTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/form/combos.html";
+        return "/kitchensink/#form-combos";
     }
     
     @Test
