@@ -29,15 +29,10 @@
         <string>grid/live-search-grid.html</string>
         <string>grid/locking-group-summary-grid.html</string>
         <string>grid/locking-grp-summary-grp-hdrs-grid.html</string>
-        <string>grid/multiple-sorting.html</string>
-        <string>grid/paging.html</string>
         <string>grid/remote-group-summary-grid.html</string>
         <string>grid/row-editing.html</string>
-        <string>grid/xml-grid.html</string>
-        <string>grid-filtering/grid-filter-local.html</string>
         <string>history/history.html</string>
         <string>history/history-router.html</string>
-        <string>key-feed-viewer/feed-viewer.html</string>
         <string>keynav/keynav.html</string>
         <string>kitchensink/index.html</string>
         <string>layout/anchor.html</string>
