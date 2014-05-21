@@ -54,7 +54,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         browsers.add(new String[]{"Windows 7", "firefox", "27", "neptune"});
         browsers.add(new String[]{"Windows 7", "internet explorer", "10", "neptune"});
         browsers.add(new String[]{"Windows 7", "internet explorer", "11", "neptune"});
-//        browsers.add(new String[]{"Windows 7", "internet explorer", "9", "neptune"});
+        browsers.add(new String[]{"Windows 7", "internet explorer", "9", "neptune"});
 //        browsers.add(new String[]{"Windows 7", "internet explorer", "8", "neptune"});
 //        browsers.add(new String[]{"Windows 7", "opera", "12", "neptune"});
         browsers.add(new String[]{"OS X 10.8", "safari", "6", "neptune"});
