@@ -70,7 +70,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         
         capabilities.setCapability("command-timeout", 600);
         capabilities.setCapability("idle-timeout", 120);
-        capabilities.setCapability("record-video", false);
+        // capabilities.setCapability("record-video", false);
         capabilities.setCapability("record-screenshots", false);
         
         capabilities.setCapability(CapabilityType.PLATFORM, _platform);
@@ -115,10 +115,9 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
     protected void openExample() {
         String callbackAddress = _propertiesManager.getProperty("callback.address");
         _driver.get(String.format(
-                "http://%s:8888/ext/build/examples%s?theme=%s",
+                "http://%s:8888/ext/build/examples%s",
                 callbackAddress,
-                getExamplePath(),
-                _theme));
+                getExamplePath()));
 
         long startTime = System.currentTimeMillis();
         boolean extIsReady = false;
