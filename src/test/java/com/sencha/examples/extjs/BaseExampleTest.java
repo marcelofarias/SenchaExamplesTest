@@ -112,7 +112,9 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         openExample();
     }
     
-    protected void openExample() {
+    protected void openExample() throws Exception {
+        Thread.sleep(2000);
+        
         String callbackAddress = _propertiesManager.getProperty("callback.address");
         _driver.get(String.format(
                 "http://%s:8888/ext/build/examples%s",
@@ -132,6 +134,8 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         if (!extIsReady) {
             Assert.fail("ExtJS didn't get ready in 120 seconds. JS errors:\n" + getJavaScriptErrors());
         }
+
+        Thread.sleep(2000);
     }
 
     @After
