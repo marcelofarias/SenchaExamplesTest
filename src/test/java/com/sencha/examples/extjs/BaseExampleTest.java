@@ -126,6 +126,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         }
         
         _driver.get(address);
+        Thread.sleep(5000);
 
         long startTime = System.currentTimeMillis();
         boolean extIsReady = false;
