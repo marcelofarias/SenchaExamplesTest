@@ -122,7 +122,7 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
         if (address.contains("#")) {
             address = address.replace("#", String.format("?theme=%s#", _theme));
         } else {
-            address = address.concat(String.format("?theme=%s#", _theme));
+            address = address.concat(String.format("?theme=%s", _theme));
         }
         
         _driver.get(address);
