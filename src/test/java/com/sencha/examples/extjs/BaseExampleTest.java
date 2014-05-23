@@ -114,10 +114,18 @@ public abstract class BaseExampleTest implements SauceOnDemandSessionIdProvider 
     
     protected void openExample() throws Exception {
         String callbackAddress = _propertiesManager.getProperty("callback.address");
-        _driver.get(String.format(
+        String address = String.format(
                 "http://%s:8888/ext/build/examples%s",
                 callbackAddress,
-                getExamplePath()));
+                getExamplePath());
+        
+        if (address.contains("#")) {
+            address = address.replace("#", String.format("?theme=%s#", _theme));
+        } else {
+            address = address.concat(String.format("?theme=%s#", _theme));
+        }
+        
+        _driver.get(address);
 
         long startTime = System.currentTimeMillis();
         boolean extIsReady = false;
