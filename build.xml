@@ -81,7 +81,7 @@
     </resources>
     <pathconvert property="ext.example.list" refid="ext.example.resources" pathsep="," />
     <property name="ext.pkg" value="${basedir}/pkgs/ext.pkg"/>
-    <property name="ext.dir" value="/Users/marcelofarias/git/SDK/ext"/>
+    <property name="ext.dir" value="${basedir}/ext"/>
     <property name="ext.example.dir" value="${ext.dir}/build/examples"/>
 
     <property name="touch.example.list" value=""/>
@@ -103,7 +103,6 @@
         <attribute name="exampleDir"/>
         <attribute name="exampleList"/>
         <sequential>
-            <echoproperties/>
             <for list="@{exampleList}" param="example">
                 <sequential>
                     <echo>Instrumenting example @{example}</echo>
@@ -131,6 +130,7 @@
     </macrodef>
     
     <target name="prepare-examples">
+        <unzip-pkg pkgFile="${ext.pkg}" pkgDir="${ext.dir}"/>
         <instrument-examples exampleDir="${ext.example.dir}" exampleList="${ext.example.list}"/>
     </target>
     
