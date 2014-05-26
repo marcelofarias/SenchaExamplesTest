@@ -13,15 +13,15 @@ import java.util.List;
 import static org.fest.assertions.Assertions.assertThat;
 
 @RunWith(ConcurrentParameterized.class)
-public class ComplexLayoutTest extends BaseExampleTest {
+public class AbsoluteLayoutTest extends BaseExampleTest {
 
-    public ComplexLayoutTest(String platform, String browser, String version, String theme) {
+    public AbsoluteLayoutTest(String platform, String browser, String version, String theme) {
         super(platform, browser, version, theme);
     }
     
     @Override
     protected String getExamplePath() {
-        return "/layout/complex.html";
+        return "/kitchensink/#layout-absolute";
     }
     
     @Test

@@ -19,7 +19,6 @@
         <string>direct/direct-tree.html</string>
         <string>feed-viewer/feed-viewer.html</string>
         <string>grid/binding.html</string>
-        <string>grid/binding-with-classes.html</string>
         <string>grid/buffer-grid.html</string>
         <string>grid/transform-dom.html</string>
         <string>grid/grid-plugins.html</string>
@@ -35,14 +34,6 @@
         <string>history/history-router.html</string>
         <string>keynav/keynav.html</string>
         <string>kitchensink/index.html</string>
-        <string>layout/anchor.html</string>
-        <string>layout/border.html</string>
-        <string>layout/column.html</string>
-        <string>layout/complex.html</string>
-        <string>layout/hbox.html</string>
-        <string>layout/vbox.html</string>
-        <string>layout/table.html</string>
-        <string>layout-browser/layout-browser.html</string>
         <string>locale/dutch-form.html</string>
         <string>locale/multi-lang.html</string>
         <string>menu/actions.html</string>
@@ -90,7 +81,7 @@
     </resources>
     <pathconvert property="ext.example.list" refid="ext.example.resources" pathsep="," />
     <property name="ext.pkg" value="${basedir}/pkgs/ext.pkg"/>
-    <property name="ext.dir" value="${basedir}/ext"/>
+    <property name="ext.dir" value="/Users/marcelofarias/git/SDK/ext"/>
     <property name="ext.example.dir" value="${ext.dir}/build/examples"/>
 
     <property name="touch.example.list" value=""/>
@@ -112,6 +103,7 @@
         <attribute name="exampleDir"/>
         <attribute name="exampleList"/>
         <sequential>
+            <echoproperties/>
             <for list="@{exampleList}" param="example">
                 <sequential>
                     <echo>Instrumenting example @{example}</echo>
@@ -139,7 +131,6 @@
     </macrodef>
     
     <target name="prepare-examples">
-        <unzip-pkg pkgFile="${ext.pkg}" pkgDir="${ext.dir}"/>
         <instrument-examples exampleDir="${ext.example.dir}" exampleList="${ext.example.list}"/>
     </target>
     

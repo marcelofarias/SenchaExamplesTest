@@ -21,7 +21,7 @@ public class VBoxLayoutTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/layout/vbox.html";
+        return "/kitchensink/#layout-vertical-box";
     }
     
     @Test

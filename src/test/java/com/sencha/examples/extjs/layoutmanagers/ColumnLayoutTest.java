@@ -21,7 +21,7 @@ public class ColumnLayoutTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/layout/column.html";
+        return "/kitchensink/#layout-column";
     }
     
     @Test

@@ -21,7 +21,7 @@ public class BorderLayoutTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/layout/border.html";
+        return "/kitchensink/#layout-border";
     }
     
     @Test

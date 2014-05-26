@@ -13,15 +13,15 @@ import java.util.List;
 import static org.fest.assertions.Assertions.assertThat;
 
 @RunWith(ConcurrentParameterized.class)
-public class HBoxLayoutTest extends BaseExampleTest {
+public class CardTabsLayoutTest extends BaseExampleTest {
 
-    public HBoxLayoutTest(String platform, String browser, String version, String theme) {
+    public CardTabsLayoutTest(String platform, String browser, String version, String theme) {
         super(platform, browser, version, theme);
     }
     
     @Override
     protected String getExamplePath() {
-        return "/kitchensink/#layout-horizontal-box";
+        return "/kitchensink/#layout-cardtabs";
     }
     
     @Test

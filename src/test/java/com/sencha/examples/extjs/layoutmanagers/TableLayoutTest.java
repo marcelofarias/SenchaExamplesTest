@@ -21,7 +21,7 @@ public class TableLayoutTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/layout/table.html";
+        return "/kitchensink/#layout-table";
     }
     
     @Test

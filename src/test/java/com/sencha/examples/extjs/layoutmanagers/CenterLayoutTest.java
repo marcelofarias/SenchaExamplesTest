@@ -1,35 +1,34 @@
 /*
  * Copyright (c) 2012-2013. Sencha Inc.
  */
-package com.sencha.examples.extjs.grids;
+package com.sencha.examples.extjs.layoutmanagers;
 
 import com.saucelabs.junit.ConcurrentParameterized;
 import com.sencha.examples.extjs.BaseExampleTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
 import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
 
 @RunWith(ConcurrentParameterized.class)
-public class BindingWithClassesTest extends BaseExampleTest {
+public class CenterLayoutTest extends BaseExampleTest {
 
-    public BindingWithClassesTest(String platform, String browser, String version, String theme) {
+    public CenterLayoutTest(String platform, String browser, String version, String theme) {
         super(platform, browser, version, theme);
     }
     
     @Override
     protected String getExamplePath() {
-        return "/grid/binding-with-classes.html";
+        return "/kitchensink/#layout-center";
     }
     
     @Test
     public void exampleLoadsWithoutErrors() throws Exception {
         List<String> errors = getJavaScriptErrors();
         assertThat(errors).isEmpty();
-//        saveScreenshot("grids.BindingWithClasses");
+//        saveScreenshot("grids.XMLGrid");
     }
 
 }
