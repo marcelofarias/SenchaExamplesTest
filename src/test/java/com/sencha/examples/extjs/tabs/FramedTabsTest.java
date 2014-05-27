@@ -13,15 +13,15 @@ import java.util.List;
 import static org.fest.assertions.Assertions.assertThat;
 
 @RunWith(ConcurrentParameterized.class)
-public class TabOverflowMenuTest extends BaseExampleTest {
+public class FramedTabsTest extends BaseExampleTest {
 
-    public TabOverflowMenuTest(String platform, String browser, String version, String theme) {
+    public FramedTabsTest(String platform, String browser, String version, String theme) {
         super(platform, browser, version, theme);
     }
     
     @Override
     protected String getExamplePath() {
-        return "/tabs/tab-scroller-menu.html";
+        return "/kitchensink/#framed-tabs";
     }
     
     @Test

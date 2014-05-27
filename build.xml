@@ -55,10 +55,7 @@
         <string>state/state.html</string>
         <string>statusbar/statusbar-advanced.html</string>
         <string>statusbar/statusbar-demo.html</string>
-        <string>tabs/side-tabs.html</string>
         <string>tabs/tab-scroller-menu.html</string>
-        <string>tabs/tabs.html</string>
-        <string>tabs/tabs-adv.html</string>
         <string>ticket-app/index.html</string>
         <string>themes/index.html</string>
         <string>toolbar/overflow.html</string>

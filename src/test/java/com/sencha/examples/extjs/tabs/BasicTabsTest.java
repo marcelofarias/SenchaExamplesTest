@@ -21,7 +21,7 @@ public class BasicTabsTest extends BaseExampleTest {
     
     @Override
     protected String getExamplePath() {
-        return "/tabs/tabs.html";
+        return "/kitchensink/#basic-tabs";
     }
     
     @Test

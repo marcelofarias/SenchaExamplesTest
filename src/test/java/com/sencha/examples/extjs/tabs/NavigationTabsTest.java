@@ -13,15 +13,15 @@ import java.util.List;
 import static org.fest.assertions.Assertions.assertThat;
 
 @RunWith(ConcurrentParameterized.class)
-public class AdvancedTabsTest extends BaseExampleTest {
+public class NavigationTabsTest extends BaseExampleTest {
 
-    public AdvancedTabsTest(String platform, String browser, String version, String theme) {
+    public NavigationTabsTest(String platform, String browser, String version, String theme) {
         super(platform, browser, version, theme);
     }
     
     @Override
     protected String getExamplePath() {
-        return "/kitchensink/#advanced-tabs";
+        return "/kitchensink/#navigation-tabs";
     }
     
     @Test
